@@ -1,0 +1,26 @@
+{
+  "model": "llama3.2:1b (Ollama, Q8_0)",
+  "architecture": "decoder-only",
+  "adaptation": "3-shot in-context prompting",
+  "params_total": 1235814432,
+  "params_trainable": 0,
+  "train_seconds": 0,
+  "infer_seconds": 521.9,
+  "infer_sent_per_s": 0.19,
+  "bleu": 23.38,
+  "chrf": 54.07,
+  "shots": [
+    {
+      "en": "There is a child in a red and yellow toy car.",
+      "de": "Kind in einem rot-gelben Spielzeugauto."
+    },
+    {
+      "en": "A woman sits on a flower pot at a crowded coffee shop.",
+      "de": "Eine Frau sitzt in einem überfüllten Cafe auf einem Blumentopf."
+    },
+    {
+      "en": "Woman playing tennis in a bright orange outfit.",
+      "de": "Eine Frau spielt in einem leuchtend orangen Outfit Tennis."
+    }
+  ]
+}

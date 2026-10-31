@@ -1,0 +1,26 @@
+[
+  {
+    "bleu": 22.48,
+    "chrf": 54.07,
+    "temperature": 0.0,
+    "seconds": 162.8
+  },
+  {
+    "bleu": 19.05,
+    "chrf": 50.66,
+    "temperature": 0.5,
+    "seconds": 137.5
+  },
+  {
+    "bleu": 13.0,
+    "chrf": 44.97,
+    "temperature": 1.0,
+    "seconds": 149.3
+  },
+  {
+    "bleu": 1.15,
+    "chrf": 18.86,
+    "temperature": 1.5,
+    "seconds": 232.8
+  }
+]

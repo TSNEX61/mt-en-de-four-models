@@ -31,7 +31,10 @@ def translate(srcs, temperature=0.0, shots=(), cache=None):
     for s in srcs[len(hyps):]:
         out = call("/api/chat", {"model": MODEL_ID, "stream": False,
                                  "messages": llm_utils.build_messages(s, shots),
-                                 "options": {"temperature": temperature, "seed": SEED, "num_predict": 64}})
+                                 # top_k=0 / top_p=1 disable Ollama's default truncation (40 / 0.9) so that
+                                 # sampling matches the pure temperature sampling used for the other models
+                                 "options": {"temperature": temperature, "seed": SEED, "num_predict": 64,
+                                             "top_k": 0, "top_p": 1.0}})
         hyps.append(clean_llm_output(out["message"]["content"]))
         if cache:
             with open(cache, "a", encoding="utf-8") as f:
@@ -43,7 +46,8 @@ def translate(srcs, temperature=0.0, shots=(), cache=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--shots", type=int, default=3)
-    ap.add_argument("--temp_subset", type=int, default=15, help="fewer sentences than TEMP_SUBSET to save CPU")
+    ap.add_argument("--temp_subset", type=int, default=TEMP_SUBSET, help="sentences for the temperature sweep")
+    ap.add_argument("--sweep_only", action="store_true", help="only (re)run the temperature sweep")
     args = ap.parse_args()
     set_seed()
 
@@ -54,6 +58,10 @@ def main():
     # few-shot demonstrations: fixed random training pairs of typical length
     pool = [r for r in load_split("train") if 8 <= len(r["en"].split()) <= 14]
     shots = random.Random(SEED).sample(pool, args.shots)
+    n = min(args.temp_subset, TEMP_SUBSET)
+    if args.sweep_only:
+        temperature_sweep("llama", lambda s, t: translate(s, t, shots=shots), srcs[:n], refs[:n])
+        return
 
     with Timer() as tm:
         hyps = translate(srcs, shots=shots, cache=CKPT / "llama_test_partial.jsonl")
@@ -65,7 +73,6 @@ def main():
         "infer_sent_per_s": round(len(srcs) / tm.seconds, 2), **score(hyps, refs), "shots": shots})
 
     ethics_probe("llama", lambda s: translate(s, shots=shots))
-    n = min(args.temp_subset, TEMP_SUBSET)
     temperature_sweep("llama", lambda s, t: translate(s, t, shots=shots), srcs[:n], refs[:n])
 
 
