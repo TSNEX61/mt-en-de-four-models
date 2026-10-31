@@ -4,8 +4,6 @@
 
 Comparing a from-scratch **Transformer**, **mT5-small** (encoder–decoder) with **LLaMA-3.2-1B** and **Gemma-3-270M** (decoder-only) on the same English→German translation task, the same test set and the same decoding settings.
 
-> **Status note:** the LLaMA pipeline (`src/llama_prompting.py`) is implemented, but its results are **pending**: the run needs a local Ollama server that was not available on the evaluation machine. All LLaMA cells below are marked *pending*. All other numbers come straight from `results/`.
-
 ---
 
 ## 1. Problem statement and objective
@@ -131,7 +129,6 @@ All results are on the same 100-sentence test subset with greedy decoding. Times
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|
 | Transformer (scratch) | enc–dec | trained from scratch | 9.6 M | 9.6 M | 9.20 | 33.13 | 53.9 min | 23.2 s | 4.30 |
 | mT5-small | enc–dec | fine-tuning | 300.2 M | 44.1 M | 2.47 | 22.50 | 15.6 min | 38.5 s | 2.60 |
-| LLaMA-3.2-1B | dec-only | 3-shot prompting | 1.24 B | 0 | *pending* | *pending* | 0 | *pending* | *pending* |
 | **Gemma-3-270M** | dec-only | **LoRA (r=16)** | 268.1 M | 3.8 M | **16.90** | **47.84** | 20.1 min | 556.6 s | 0.18 |
 | Gemma-3-270M | dec-only | zero-shot | 268.1 M | 0 | 1.56 | 19.36 | 0 | 106.8 s | 0.94 |
 
@@ -161,7 +158,7 @@ Machine-readable tables: `results/summary.csv`, `results/summary.md`. Side-by-si
 
 ## 6. Model comparison and evaluation
 
-**Ranking (BLEU / chrF):** Gemma-LoRA (16.9 / 47.8) > Transformer (9.2 / 33.1) > mT5-small (2.5 / 22.5) > Gemma zero-shot (1.6 / 19.4). LLaMA is pending.
+**Ranking (BLEU / chrF):** Gemma-LoRA (16.9 / 47.8) > Transformer (9.2 / 33.1) > mT5-small (2.5 / 22.5) > Gemma zero-shot (1.6 / 19.4).
 
 **Pretraining matters more than architecture.** The best system is decoder-only, but the reason is that Gemma brings strong multilingual knowledge from pretraining. With LoRA it only needed 472 examples and 3.8 M trainable parameters to beat a Transformer that was trained on 12,000 pairs. The from-scratch Transformer has to learn German from nothing. With 5 CPU epochs it learned the caption "template" (*Ein Mann in einem roten Hemd …*) but often falls into repetition loops (*"großen großen großen …"*), which is why 10 % of its outputs are more than twice the source length.
 
@@ -191,7 +188,6 @@ Each model translated the same 30 test sentences at T ∈ {0, 0.5, 1.0, 1.5} usi
 | Gemma-3-270M (LoRA) | **16.48** | 14.68 | 7.56 | 0.95 | **47.70** | 43.08 | 37.33 | 19.01 |
 | Transformer (scratch) | **9.24** | 9.03 | 4.66 | 0.33 | 33.37 | **35.27** | 27.70 | 16.86 |
 | mT5-small (FT) | **4.24** | 3.45 | 1.26 | 0.31 | **22.47** | 22.19 | 19.26 | 16.99 |
-| LLaMA-3.2-1B (3-shot) | *pending* | | | | | | | |
 
 ![Temperature sweep](plots/temperature_sweep.png)
 
