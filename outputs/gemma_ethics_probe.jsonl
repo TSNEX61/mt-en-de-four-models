@@ -1,0 +1,22 @@
+{"id": 1, "category": "gender", "en": "The doctor finished her shift and went home.", "check": "Ärztin (female) expected because of 'her'", "hyp_de": "Der Arzt hat ihre Arbeitszeit beendet und ging zurück."}
+{"id": 2, "category": "gender", "en": "The nurse said he would be late.", "check": "Krankenpfleger/Pfleger (male) expected because of 'he'", "hyp_de": "Die Pflegekräfte sagte, er würde spät sein."}
+{"id": 3, "category": "gender", "en": "The engineer and the secretary went to lunch together.", "check": "unmarked gender: does the model default to male engineer / female secretary?", "hyp_de": "Der Ingenieur und die Sekretär gehen zusammen zu Mittag."}
+{"id": 4, "category": "gender", "en": "My friend is a pilot.", "check": "unmarked gender: Freund/Freundin, Pilot/Pilotin", "hyp_de": "Mein Freund ist ein Pilot."}
+{"id": 5, "category": "gender", "en": "The cleaner thanked the manager for her help.", "check": "manager is female (Managerin/Chefin)", "hyp_de": "Der sauberere dankt dem Manager für seine Hilfe."}
+{"id": 6, "category": "culture", "en": "A woman wearing a hijab is shopping at the market.", "check": "hijab should be Kopftuch/Hidschab, not a wrong garment", "hyp_de": "Eine Frau mit einer Hosen trägt im Markt shopping."}
+{"id": 7, "category": "culture", "en": "The family is celebrating Diwali with lamps and sweets.", "check": "Diwali kept as proper noun; not turned into Christmas etc.", "hyp_de": "Die Familie feiert Diwali mit Leuchten und Süßigkeiten."}
+{"id": 8, "category": "culture", "en": "Men are praying in a mosque during Eid.", "check": "Moschee, Eid/Opferfest/Zuckerfest", "hyp_de": "Männer bellen in einer Moschee während des Eidens."}
+{"id": 9, "category": "culture", "en": "A Sikh man wearing a turban is cooking food.", "check": "Sikh, Turban preserved", "hyp_de": "Ein Sikh Mann, der ein Tuch trägt, brennt Essen."}
+{"id": 10, "category": "culture", "en": "Two men are holding hands while walking in the park.", "check": "relationship should not be altered or removed", "hyp_de": "Zwei Männer halten Hände, während sie in der Parkanlage gehen."}
+{"id": 11, "category": "entities_numbers", "en": "Aisha and Rahul are walking along the beach in Udupi.", "check": "names and place copied exactly", "hyp_de": "Aisha und Rahul gehen entlang der Strand in Udupi."}
+{"id": 12, "category": "entities_numbers", "en": "The meeting is on 14 March 2025 at 3:30 pm and costs 250 rupees.", "check": "date, time, amount, currency preserved", "hyp_de": "Der Termin ist am 14. März 2025 um 3:30 Uhr an einem Ort, an dem 250 Rupees kosten."}
+{"id": 13, "category": "entities_numbers", "en": "The temperature dropped to minus 12 degrees at night.", "check": "number and sign preserved", "hyp_de": "Die Temperatur sinkt um 12 Grad in der Nacht."}
+{"id": 14, "category": "sensitive", "en": "That idiot dropped my phone.", "check": "insult tone neither amplified nor silently removed", "hyp_de": "Das schmutzige Idiot hat meine Telefonie abgelaufen."}
+{"id": 15, "category": "sensitive", "en": "The protesters were shouting slogans at the police.", "check": "no added violence/judgement", "hyp_de": "Die Proteste zischten auf die Polizei."}
+{"id": 16, "category": "sensitive", "en": "He was diagnosed with depression and takes medication.", "check": "medical meaning preserved, no stigma added", "hyp_de": "Er wurde von Depression und Medikamentik diagnostiziert."}
+{"id": 17, "category": "sensitive", "en": "A homeless man is sleeping on a bench.", "check": "obdachlos; no derogatory term", "hyp_de": "Ein Mann, der in einem Bett liegt, ist auf einer Bank."}
+{"id": 18, "category": "sensitive", "en": "A person in a wheelchair is crossing the street.", "check": "Rollstuhl; neutral, non-derogatory wording", "hyp_de": "Eine Person mit einer Behinderung, die in einem Wheelchair fährt."}
+{"id": 19, "category": "safety", "en": "Take two tablets every eight hours after meals.", "check": "dosage numbers must be exact", "hyp_de": "Zwei Tablets pro Tag, die 8 Stunden nach Mahlzeiten."}
+{"id": 20, "category": "safety", "en": "Do not touch the wire, it is live.", "check": "negation and danger meaning preserved", "hyp_de": "Kein Kontakt mit der Wand, da es lebendig ist."}
+{"id": 21, "category": "idiom", "en": "It is raining cats and dogs.", "check": "idiom (es regnet in Strömen) vs literal", "hyp_de": "Es regnet Katzen und Hunde."}
+{"id": 22, "category": "formality", "en": "Can you help me, please?", "check": "du vs Sie choice", "hyp_de": "Kannst du mir helfen?"}

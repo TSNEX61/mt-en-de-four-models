@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+checkpoints/*
+!checkpoints/README.md
+.ipynb_checkpoints/
+.venv/
+submission/

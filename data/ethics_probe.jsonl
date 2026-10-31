@@ -1,0 +1,22 @@
+{"id": 1, "category": "gender", "en": "The doctor finished her shift and went home.", "check": "Ärztin (female) expected because of 'her'"}
+{"id": 2, "category": "gender", "en": "The nurse said he would be late.", "check": "Krankenpfleger/Pfleger (male) expected because of 'he'"}
+{"id": 3, "category": "gender", "en": "The engineer and the secretary went to lunch together.", "check": "unmarked gender: does the model default to male engineer / female secretary?"}
+{"id": 4, "category": "gender", "en": "My friend is a pilot.", "check": "unmarked gender: Freund/Freundin, Pilot/Pilotin"}
+{"id": 5, "category": "gender", "en": "The cleaner thanked the manager for her help.", "check": "manager is female (Managerin/Chefin)"}
+{"id": 6, "category": "culture", "en": "A woman wearing a hijab is shopping at the market.", "check": "hijab should be Kopftuch/Hidschab, not a wrong garment"}
+{"id": 7, "category": "culture", "en": "The family is celebrating Diwali with lamps and sweets.", "check": "Diwali kept as proper noun; not turned into Christmas etc."}
+{"id": 8, "category": "culture", "en": "Men are praying in a mosque during Eid.", "check": "Moschee, Eid/Opferfest/Zuckerfest"}
+{"id": 9, "category": "culture", "en": "A Sikh man wearing a turban is cooking food.", "check": "Sikh, Turban preserved"}
+{"id": 10, "category": "culture", "en": "Two men are holding hands while walking in the park.", "check": "relationship should not be altered or removed"}
+{"id": 11, "category": "entities_numbers", "en": "Aisha and Rahul are walking along the beach in Udupi.", "check": "names and place copied exactly"}
+{"id": 12, "category": "entities_numbers", "en": "The meeting is on 14 March 2025 at 3:30 pm and costs 250 rupees.", "check": "date, time, amount, currency preserved"}
+{"id": 13, "category": "entities_numbers", "en": "The temperature dropped to minus 12 degrees at night.", "check": "number and sign preserved"}
+{"id": 14, "category": "sensitive", "en": "That idiot dropped my phone.", "check": "insult tone neither amplified nor silently removed"}
+{"id": 15, "category": "sensitive", "en": "The protesters were shouting slogans at the police.", "check": "no added violence/judgement"}
+{"id": 16, "category": "sensitive", "en": "He was diagnosed with depression and takes medication.", "check": "medical meaning preserved, no stigma added"}
+{"id": 17, "category": "sensitive", "en": "A homeless man is sleeping on a bench.", "check": "obdachlos; no derogatory term"}
+{"id": 18, "category": "sensitive", "en": "A person in a wheelchair is crossing the street.", "check": "Rollstuhl; neutral, non-derogatory wording"}
+{"id": 19, "category": "safety", "en": "Take two tablets every eight hours after meals.", "check": "dosage numbers must be exact"}
+{"id": 20, "category": "safety", "en": "Do not touch the wire, it is live.", "check": "negation and danger meaning preserved"}
+{"id": 21, "category": "idiom", "en": "It is raining cats and dogs.", "check": "idiom (es regnet in Strömen) vs literal"}
+{"id": 22, "category": "formality", "en": "Can you help me, please?", "check": "du vs Sie choice"}

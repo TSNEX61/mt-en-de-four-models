@@ -1,0 +1,30 @@
+{
+  "model": "google/mt5-small",
+  "architecture": "encoder-decoder",
+  "adaptation": "fine-tuning (embeddings frozen)",
+  "params_total": 300176768,
+  "params_trainable": 44062080,
+  "train_examples": 1500,
+  "steps": 188,
+  "train_seconds": 935.0,
+  "infer_seconds": 38.5,
+  "infer_sent_per_s": 2.6,
+  "bleu": 2.47,
+  "chrf": 22.5,
+  "history": [
+    {
+      "epoch": 1,
+      "steps": 188,
+      "last_train_loss": 3.7455,
+      "elapsed_s": 935.0,
+      "val_loss": 3.3094
+    }
+  ],
+  "config": {
+    "n_train": 1500,
+    "epochs": 1,
+    "batch": 8,
+    "lr": 0.001,
+    "max_minutes": 20.0
+  }
+}

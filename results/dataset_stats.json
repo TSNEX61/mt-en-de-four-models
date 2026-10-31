@@ -1,0 +1,56 @@
+{
+  "source": "Multi30k (Elliott et al., 2016) \u2014 https://github.com/multi30k/dataset",
+  "hf_mirror": "https://huggingface.co/datasets/bentrevett/multi30k",
+  "direction": "English -> German",
+  "splits": {
+    "train": {
+      "raw": 29000,
+      "kept": 28995,
+      "dropped": {
+        "empty": 0,
+        "too_long": 0,
+        "bad_ratio": 2,
+        "duplicate": 3
+      },
+      "avg_en_words": 11.9,
+      "avg_de_words": 11.12,
+      "max_en_words": 37,
+      "max_de_words": 39,
+      "en_vocab": 14443,
+      "de_vocab": 24328
+    },
+    "validation": {
+      "raw": 1014,
+      "kept": 1014,
+      "dropped": {
+        "empty": 0,
+        "too_long": 0,
+        "bad_ratio": 0,
+        "duplicate": 0
+      },
+      "avg_en_words": 12.0,
+      "avg_de_words": 11.39,
+      "max_en_words": 27,
+      "max_de_words": 30,
+      "en_vocab": 2324,
+      "de_vocab": 2668
+    },
+    "test": {
+      "raw": 1000,
+      "kept": 1000,
+      "dropped": {
+        "empty": 0,
+        "too_long": 0,
+        "bad_ratio": 0,
+        "duplicate": 0
+      },
+      "avg_en_words": 11.88,
+      "avg_de_words": 10.9,
+      "max_en_words": 32,
+      "max_de_words": 30,
+      "en_vocab": 2273,
+      "de_vocab": 2471
+    }
+  },
+  "test_subset": 100
+}

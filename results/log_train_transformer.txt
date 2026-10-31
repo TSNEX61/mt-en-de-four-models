@@ -1,0 +1,68 @@
+C:\Users\TM GLOBAL RESOURCES\AppData\Roaming\Python\Python313\site-packages\torch\nn\modules\transformer.py:145: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = TransformerEncoder(
+params: 9,634,624
+{'epoch': 1, 'train_loss': 8.269, 'val_loss': 7.1612, 'elapsed_s': 348.4}
+{'epoch': 2, 'train_loss': 6.4072, 'val_loss': 6.0836, 'elapsed_s': 1854.3}
+{'epoch': 3, 'train_loss': 5.6656, 'val_loss': 5.6921, 'elapsed_s': 2202.3}
+{'epoch': 4, 'train_loss': 5.2227, 'val_loss': 5.1859, 'elapsed_s': 2537.8}
+{'epoch': 5, 'train_loss': 4.7948, 'val_loss': 4.8307, 'elapsed_s': 3235.3}
+{
+  "model": "Basic Transformer (from scratch)",
+  "architecture": "encoder-decoder",
+  "adaptation": "trained from scratch",
+  "params_total": 9634624,
+  "params_trainable": 9634624,
+  "train_examples": 12000,
+  "epochs_run": 5,
+  "best_epoch": 5,
+  "train_seconds": 3235.4,
+  "infer_seconds": 23.2,
+  "infer_sent_per_s": 4.3,
+  "bleu": 9.2,
+  "chrf": 33.13,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 8.269,
+      "val_loss": 7.1612,
+      "elapsed_s": 348.4
+    },
+    {
+      "epoch": 2,
+      "train_loss": 6.4072,
+      "val_loss": 6.0836,
+      "elapsed_s": 1854.3
+    },
+    {
+      "epoch": 3,
+      "train_loss": 5.6656,
+      "val_loss": 5.6921,
+      "elapsed_s": 2202.3
+    },
+    {
+      "epoch": 4,
+      "train_loss": 5.2227,
+      "val_loss": 5.1859,
+      "elapsed_s": 2537.8
+    },
+    {
+      "epoch": 5,
+      "train_loss": 4.7948,
+      "val_loss": 4.8307,
+      "elapsed_s": 3235.3
+    }
+  ],
+  "config": {
+    "epochs": 5,
+    "max_minutes": 90,
+    "vocab": 8000,
+    "max_tokens": 2048,
+    "lr": 0.0007,
+    "warmup": 1000,
+    "n_train": 12000
+  }
+}
+[transformer] T=0.0: {'bleu': 9.24, 'chrf': 33.37, 'temperature': 0.0, 'seconds': 6.0}
+[transformer] T=0.5: {'bleu': 9.03, 'chrf': 35.27, 'temperature': 0.5, 'seconds': 5.4}
+[transformer] T=1.0: {'bleu': 4.66, 'chrf': 27.7, 'temperature': 1.0, 'seconds': 4.3}
+[transformer] T=1.5: {'bleu': 0.33, 'chrf': 16.86, 'temperature': 1.5, 'seconds': 13.7}

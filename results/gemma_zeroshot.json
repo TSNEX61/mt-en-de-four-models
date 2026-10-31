@@ -1,0 +1,12 @@
+{
+  "model": "unsloth/gemma-3-270m-it",
+  "architecture": "decoder-only",
+  "adaptation": "zero-shot prompting",
+  "params_total": 268098176,
+  "params_trainable": 0,
+  "train_seconds": 0,
+  "infer_seconds": 106.8,
+  "infer_sent_per_s": 0.94,
+  "bleu": 1.56,
+  "chrf": 19.36
+}

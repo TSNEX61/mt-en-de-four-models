@@ -1,0 +1,61 @@
+{
+  "model": "unsloth/gemma-3-270m-it",
+  "architecture": "decoder-only",
+  "adaptation": "LoRA fine-tuning (r=16)",
+  "params_total": 268098176,
+  "params_trainable": 3796992,
+  "params_with_adapter": 271895168,
+  "train_examples": 472,
+  "steps": 236,
+  "train_seconds": 1206.7,
+  "infer_seconds": 556.6,
+  "infer_sent_per_s": 0.18,
+  "bleu": 16.9,
+  "chrf": 47.84,
+  "history": [
+    {
+      "step": 25,
+      "loss": 2.1754
+    },
+    {
+      "step": 50,
+      "loss": 1.4324
+    },
+    {
+      "step": 75,
+      "loss": 2.1885
+    },
+    {
+      "step": 100,
+      "loss": 2.1638
+    },
+    {
+      "step": 125,
+      "loss": 1.273
+    },
+    {
+      "step": 150,
+      "loss": 1.3797
+    },
+    {
+      "step": 175,
+      "loss": 1.9793
+    },
+    {
+      "step": 200,
+      "loss": 1.5454
+    },
+    {
+      "step": 225,
+      "loss": 1.1175
+    }
+  ],
+  "config": {
+    "n_train": 600,
+    "epochs": 1,
+    "batch": 2,
+    "lr": 0.0002,
+    "rank": 16,
+    "max_minutes": 20.0
+  }
+}
